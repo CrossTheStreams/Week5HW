@@ -19,6 +19,9 @@
 		49FE5A801A914CA200F49F03 /* ArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FE5A7F1A914CA200F49F03 /* ArtView.m */; };
 		49FE5A8C1A91813600F49F03 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FE5A8B1A91813600F49F03 /* mario.png */; };
 		49FE5A941A91A2F700F49F03 /* money_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49FE5A931A91A2F700F49F03 /* money_cat.jpg */; };
+		49FE5A981A91DF2E00F49F03 /* space_keyboard_cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FE5A971A91DF2E00F49F03 /* space_keyboard_cat.png */; };
+		49FE5A9A1A91E23000F49F03 /* cat1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 49FE5A991A91E23000F49F03 /* cat1.gif */; };
+		49FE5A9C1A91E45000F49F03 /* cat2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 49FE5A9B1A91E45000F49F03 /* cat2.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		49FE5A7F1A914CA200F49F03 /* ArtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtView.m; sourceTree = "<group>"; };
 		49FE5A8B1A91813600F49F03 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
 		49FE5A931A91A2F700F49F03 /* money_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = money_cat.jpg; sourceTree = "<group>"; };
+		49FE5A971A91DF2E00F49F03 /* space_keyboard_cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space_keyboard_cat.png; sourceTree = "<group>"; };
+		49FE5A991A91E23000F49F03 /* cat1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cat1.gif; sourceTree = "<group>"; };
+		49FE5A9B1A91E45000F49F03 /* cat2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cat2.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				49675C111A8DB5C000F02576 /* AppDelegate.h */,
+				49FE5A9B1A91E45000F49F03 /* cat2.gif */,
+				49FE5A991A91E23000F49F03 /* cat1.gif */,
 				49FE5A8B1A91813600F49F03 /* mario.png */,
 				49675C321A8DB60900F02576 /* BlueView.h */,
+				49FE5A971A91DF2E00F49F03 /* space_keyboard_cat.png */,
 				49FE5A931A91A2F700F49F03 /* money_cat.jpg */,
 				49675C331A8DB60900F02576 /* BlueView.m */,
 				49675C121A8DB5C000F02576 /* AppDelegate.m */,
@@ -223,8 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49675C1A1A8DB5C000F02576 /* Images.xcassets in Resources */,
+				49FE5A9A1A91E23000F49F03 /* cat1.gif in Resources */,
 				49675C1D1A8DB5C000F02576 /* Main.storyboard in Resources */,
+				49FE5A981A91DF2E00F49F03 /* space_keyboard_cat.png in Resources */,
 				49FE5A8C1A91813600F49F03 /* mario.png in Resources */,
+				49FE5A9C1A91E45000F49F03 /* cat2.gif in Resources */,
 				49FE5A941A91A2F700F49F03 /* money_cat.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

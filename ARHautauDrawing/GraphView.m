@@ -49,7 +49,7 @@
     [graphPath closePath];
     
     NSImage *image = [NSImage imageNamed:@"money_cat.jpg"];
-    [image setSize:NSMakeSize(100, 100)];
+    [image setSize:NSMakeSize(150, 132)];
     [[NSColor colorWithPatternImage: image] set];
     
     [graphPath fill];
@@ -59,10 +59,14 @@
 -(NSArray*) stockPrices {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++) {
-        double randomDouble = ((double)arc4random() / ARC4RANDOM_MAX);
-        [array addObject:[NSNumber numberWithDouble:randomDouble]];
+        double rando = [self randomDouble];
+        [array addObject:[NSNumber numberWithDouble:rando]];
     }
     return [NSArray arrayWithArray:array];
+}
+
+-(double) randomDouble {
+    return ((double)arc4random() / ARC4RANDOM_MAX);
 }
 
 

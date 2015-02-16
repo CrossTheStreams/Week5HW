@@ -12,7 +12,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.burgerCat.imageScaling = NSImageScaleNone;
+    self.burgerCat.animates = YES;
+    self.burgerCat.canDrawSubviewsIntoLayer = YES;
 
+    
+    self.sandwichCat.imageScaling = NSImageScaleNone;
+    self.sandwichCat.animates = YES;
+    self.sandwichCat.canDrawSubviewsIntoLayer = YES;
     // Do any additional setup after loading the view.
 }
 

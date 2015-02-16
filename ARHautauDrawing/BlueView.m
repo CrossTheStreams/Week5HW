@@ -17,14 +17,6 @@
     
     [color set];
     
-//    [NSBezierPath fillRect:self.bounds];
-    
-//    NSBezierPath * path = [NSBezierPath bezierPathWithOvalInRect:self.bounds];
-//    [path fill];
-//    
-//    [[NSColor redColor] set];
-//    [path stroke];
-    
     // convenience constructor
     NSBezierPath * path = [NSBezierPath bezierPath];
     [path moveToPoint: CGPointMake(0, 0)];

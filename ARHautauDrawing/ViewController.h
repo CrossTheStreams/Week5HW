@@ -10,6 +10,8 @@
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSImageView *burgerCat;
+@property (weak) IBOutlet NSImageView *sandwichCat;
 
 @end
 
