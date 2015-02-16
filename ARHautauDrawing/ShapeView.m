@@ -18,23 +18,9 @@
     [[NSColor blueColor] set];
     [NSBezierPath fillRect: dirtyRect];
     
-    
     [self drawCircle];
     [self drawTriangle];
     [self drawRectangle];
-
-//    // set pattern background
-//    [[NSColor greenColor] set];
-//    
-//    // make triangle
-//    NSBezierPath *trianglePath = [NSBezierPath bezierPath];
-//    NSPoint triangleCenterPoint = NSMakePoint(100, 100);
-//    [trianglePath appendBezierPathWithArcWithCenter: triangleCenterPoint radius: 40 startAngle:0 endAngle:360];
-//    [trianglePath fill];
-
-}
-
--(void) fillBackground {
 
 }
 
@@ -44,12 +30,12 @@
     
     // make circle
     NSBezierPath *circlePath = [NSBezierPath bezierPath];
-    NSPoint circleCenterPoint = NSMakePoint(60, 100);
-    [circlePath appendBezierPathWithArcWithCenter:circleCenterPoint radius: 40 startAngle:0 endAngle:360];
+    CGSize frameSize  = self.frame.size;
+    NSPoint circleCenterPoint = CGPointMake(frameSize.width/5, frameSize.height/2);
+    [circlePath appendBezierPathWithArcWithCenter:circleCenterPoint radius: frameSize.width/12 startAngle:0 endAngle:360];
     
     [[NSColor redColor] set];
     [circlePath fill];
-    
 
     [[NSColor whiteColor] set];
     [circlePath stroke];
@@ -64,28 +50,38 @@
     // outer triangle
     NSBezierPath *outerTrianglePath = [NSBezierPath bezierPath];
     
-    [outerTrianglePath moveToPoint: CGPointMake(130, 60)];
-    [outerTrianglePath relativeLineToPoint: NSMakePoint(60, 80)];
-    [outerTrianglePath relativeLineToPoint: NSMakePoint(60, -80)];
+    CGSize frameSize  = self.frame.size;
+    
+    CGFloat startPoint = frameSize.width/2.75;
+    CGFloat edge = frameSize.width/7.5;
+    CGFloat outterHeight = frameSize.height/2.6;
+    
+    [outerTrianglePath moveToPoint: CGPointMake(startPoint, outterHeight)];
+    [outerTrianglePath relativeLineToPoint: NSMakePoint(edge, edge)];
+    [outerTrianglePath relativeLineToPoint: NSMakePoint(edge, -edge)];
     [outerTrianglePath closePath];
     [outerTrianglePath fill];
     
     
     //inner triangle
     NSBezierPath *innerTrianglePath = [NSBezierPath bezierPath];
-    
     [[NSColor redColor] set];
-    [innerTrianglePath moveToPoint: CGPointMake(140, 65)];
-    [innerTrianglePath relativeLineToPoint:NSMakePoint(50, 65)];
-    [innerTrianglePath relativeLineToPoint:NSMakePoint(50, -65)];
+    
+    CGFloat innerPoint = startPoint + 10;
+    CGFloat innerEdge = edge - 10;
+    
+    [innerTrianglePath moveToPoint: CGPointMake(innerPoint, outterHeight + 5)];
+    [innerTrianglePath relativeLineToPoint:NSMakePoint(innerEdge, innerEdge)];
+    [innerTrianglePath relativeLineToPoint:NSMakePoint(innerEdge, -(innerEdge))];
     [innerTrianglePath closePath];
     [innerTrianglePath fill];
     
 }
 
 -(void) drawRectangle {
-    
     [NSBezierPath setDefaultLineWidth: 10];
+    
+    CGSize frameSize  = self.frame.size;
     
     NSBezierPath *rectanglePath = [NSBezierPath bezierPath];
     
@@ -93,10 +89,13 @@
 
     [[NSColor colorWithPatternImage: image] set];
     
-    [rectanglePath moveToPoint: CGPointMake(290, 60)];
-    [rectanglePath relativeLineToPoint: NSMakePoint(0, 80)];
-    [rectanglePath relativeLineToPoint:NSMakePoint(60, 0)];
-    [rectanglePath relativeLineToPoint: NSMakePoint(0, -80)];
+    CGFloat width = frameSize.width/5;
+    CGFloat height = frameSize.height/2;
+    
+    [rectanglePath moveToPoint: CGPointMake((frameSize.width/1.1), frameSize.height/4)];
+    [rectanglePath relativeLineToPoint: NSMakePoint(0, height)];
+    [rectanglePath relativeLineToPoint:NSMakePoint(-width, 0)];
+    [rectanglePath relativeLineToPoint: NSMakePoint(0, -height)];
     [rectanglePath closePath];
     
     [rectanglePath fill];

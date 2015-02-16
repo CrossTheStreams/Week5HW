@@ -710,15 +710,21 @@
         <!--Shapes-->
         <scene sceneID="28i-cc-mbv">
             <objects>
-                <viewController title="Shapes" id="O7W-KJ-Pl9" sceneMemberID="viewController">
+                <viewController title="Shapes" id="O7W-KJ-Pl9" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="NSX-Vs-s1s">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9f-a8-j6B" customClass="ShapeView">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="g9f-a8-j6B" customClass="ShapeView">
                                 <rect key="frame" x="20" y="20" width="410" height="260"/>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="g9f-a8-j6B" firstAttribute="top" secondItem="NSX-Vs-s1s" secondAttribute="top" constant="20" symbolic="YES" id="Vdb-vk-DaG"/>
+                            <constraint firstAttribute="trailing" secondItem="g9f-a8-j6B" secondAttribute="trailing" constant="20" symbolic="YES" id="vB7-r6-He5"/>
+                            <constraint firstItem="g9f-a8-j6B" firstAttribute="leading" secondItem="NSX-Vs-s1s" secondAttribute="leading" constant="20" id="xPH-k1-Q2P"/>
+                            <constraint firstAttribute="bottom" secondItem="g9f-a8-j6B" secondAttribute="bottom" constant="20" symbolic="YES" id="xQN-T3-zBc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="JRB-rx-VQM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
