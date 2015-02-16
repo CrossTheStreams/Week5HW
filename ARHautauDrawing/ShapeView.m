@@ -86,7 +86,6 @@
     NSBezierPath *rectanglePath = [NSBezierPath bezierPath];
     
     NSImage *image = [NSImage imageNamed:@"mario"];
-
     [[NSColor colorWithPatternImage: image] set];
     
     CGFloat width = frameSize.width/5;

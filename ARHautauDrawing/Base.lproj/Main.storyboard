@@ -672,10 +672,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-VF-LIY" customClass="GraphView">
-                                <rect key="frame" x="20" y="20" width="440" height="230"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="rQS-VF-LIY" customClass="GraphView">
+                                <rect key="frame" x="20" y="20" width="431" height="230"/>
                             </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rQS-VF-LIY" secondAttribute="trailing" constant="29" id="78k-Db-RBr"/>
+                            <constraint firstAttribute="bottom" secondItem="rQS-VF-LIY" secondAttribute="bottom" constant="20" id="Bgm-QS-CXP"/>
+                            <constraint firstItem="rQS-VF-LIY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="DOw-F0-uH1"/>
+                            <constraint firstItem="rQS-VF-LIY" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="WeP-I9-B50"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rQS-VF-LIY" secondAttribute="bottom" constant="20" id="gbT-RU-iIc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -712,11 +719,11 @@
             <objects>
                 <viewController title="Shapes" id="O7W-KJ-Pl9" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="NSX-Vs-s1s">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="g9f-a8-j6B" customClass="ShapeView">
-                                <rect key="frame" x="20" y="20" width="410" height="260"/>
+                                <rect key="frame" x="20" y="20" width="440" height="260"/>
                             </customView>
                         </subviews>
                         <constraints>
@@ -729,7 +736,7 @@
                 </viewController>
                 <customObject id="JRB-rx-VQM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="702"/>
+            <point key="canvasLocation" x="752" y="709"/>
         </scene>
         <!--Art-->
         <scene sceneID="AcW-bq-l6f">
