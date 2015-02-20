@@ -674,6 +674,22 @@
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="rQS-VF-LIY" customClass="GraphView">
                                 <rect key="frame" x="20" y="20" width="431" height="230"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXG-mK-aur">
+                                        <rect key="frame" x="158" y="202" width="114" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Draw Graph" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="T8R-uA-GhW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="didClickGraphButton:" target="XfG-lQ-9wD" id="Q5O-Dx-xH4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="hXG-mK-aur" secondAttribute="centerX" constant="0.5" id="GMv-oD-50B"/>
+                                    <constraint firstItem="hXG-mK-aur" firstAttribute="top" secondItem="rQS-VF-LIY" secondAttribute="top" id="bHf-cx-hkf"/>
+                                </constraints>
                             </customView>
                         </subviews>
                         <constraints>
@@ -684,6 +700,10 @@
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rQS-VF-LIY" secondAttribute="bottom" constant="20" id="gbT-RU-iIc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="graphButton" destination="hXG-mK-aur" id="X5P-U0-F6g"/>
+                        <outlet property="graphView" destination="rQS-VF-LIY" id="3nn-01-ZDv"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

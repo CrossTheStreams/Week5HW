@@ -13,8 +13,6 @@
 
 @interface ArtView()
 
-@property (strong, nonatomic) NSArray *colors;
-
 @end
 
 @implementation ArtView
@@ -32,18 +30,18 @@
 
 -(void) drawOuterSpace {
     
-    if (!self.colors) {
-        self.colors = @[[NSColor blueColor],
+
+    NSArray *colors = @[[NSColor blueColor],
                         [NSColor redColor],
                         [NSColor yellowColor],
                         [NSColor greenColor],
                         [NSColor purpleColor]];
-    }
+    
     CGFloat width = self.frame.size.width;
     CGFloat height = self.frame.size.height;
     for (int i = 0; i < 100; i++) {
         NSInteger colorIndex = i % 5;
-        NSColor *color = [self.colors objectAtIndex:colorIndex];
+        NSColor *color = [colors objectAtIndex:colorIndex];
         CGPoint point = CGPointMake((width * [self randomDouble]), (height * [self randomDouble]));
         [self drawStarWithNSColor:color AndCGPoint:point];
     }
@@ -72,6 +70,7 @@
     [path relativeLineToPoint:CGPointMake(-15, 5)];
     
     [path fill];
+    
 }
 
 -(double) randomDouble {

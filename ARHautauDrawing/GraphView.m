@@ -8,9 +8,6 @@
 
 #import "GraphView.h"
 
-// thanks to: http://stackoverflow.com/questions/5172421/generate-a-random-float-between-0-and-1
-#define ARC4RANDOM_MAX      0x100000000
-
 @interface GraphView()
 
 @property (strong, nonatomic) NSArray *graphStockPrices;
@@ -34,11 +31,8 @@
     CGFloat increment = (self.frame.size.width/10);
     CGFloat height = self.frame.size.height;
     
-    if (!self.graphStockPrices) {
-        self.graphStockPrices = [self stockPrices];
-    }
+    NSArray *prices = [self.dataSource graphViewData];
     
-    NSArray *prices = self.graphStockPrices;
     for (int i = 0; i < 10; i++) {
         NSNumber *price = [prices objectAtIndex:i];
         CGFloat priceHeight = height * [price doubleValue];
@@ -59,18 +53,6 @@
     
 }
 
--(NSArray*) stockPrices {
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 10; i++) {
-        double rando = [self randomDouble];
-        [array addObject:[NSNumber numberWithDouble:rando]];
-    }
-    return [NSArray arrayWithArray:array];
-}
-
--(double) randomDouble {
-    return ((double)arc4random() / ARC4RANDOM_MAX);
-}
 
 
 @end

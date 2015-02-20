@@ -49,6 +49,7 @@
 		49675C281A8DB5C000F02576 /* ARHautauDrawingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARHautauDrawingTests.m; sourceTree = "<group>"; };
 		49675C321A8DB60900F02576 /* BlueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueView.h; sourceTree = "<group>"; };
 		49675C331A8DB60900F02576 /* BlueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueView.m; sourceTree = "<group>"; };
+		49E2616A1A96E4F100BE54C9 /* GraphViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewDataSource.h; sourceTree = "<group>"; };
 		49FE5A781A914C9400F49F03 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		49FE5A791A914C9400F49F03 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		49FE5A7B1A914C9C00F49F03 /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 				49675C1B1A8DB5C000F02576 /* Main.storyboard */,
 				49FE5A781A914C9400F49F03 /* GraphView.h */,
 				49FE5A791A914C9400F49F03 /* GraphView.m */,
+				49E2616A1A96E4F100BE54C9 /* GraphViewDataSource.h */,
 				49FE5A7E1A914CA200F49F03 /* ArtView.h */,
 				49FE5A7F1A914CA200F49F03 /* ArtView.m */,
 				49FE5A7B1A914C9C00F49F03 /* ShapeView.h */,

@@ -7,11 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GraphViewDataSource.h"
+#import "GraphView.h"
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <GraphViewDataSource>
 
-@property (weak) IBOutlet NSImageView *burgerCat;
-@property (weak) IBOutlet NSImageView *sandwichCat;
 
 @end
 

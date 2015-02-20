@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GraphViewDataSource.h"
 IB_DESIGNABLE
 
 @interface GraphView : NSView
+
+@property (weak) id <GraphViewDataSource> dataSource;
 
 @end
