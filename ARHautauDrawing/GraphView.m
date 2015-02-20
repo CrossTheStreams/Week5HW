@@ -27,8 +27,8 @@
 
 -(void) drawGraph {
     
+    [NSBezierPath setDefaultLineWidth: 3];
     NSBezierPath *graphPath = [NSBezierPath bezierPath];
-    [[NSColor blackColor] set];
     
     [graphPath moveToPoint: NSMakePoint(0, 0)];
     CGFloat increment = (self.frame.size.width/10);
@@ -53,6 +53,9 @@
     [[NSColor colorWithPatternImage: image] set];
     
     [graphPath fill];
+    
+    [[NSColor blackColor] set];
+    [graphPath stroke];
     
 }
 

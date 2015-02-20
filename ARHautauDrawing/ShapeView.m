@@ -47,8 +47,9 @@
 
 -(void) drawTriangle {
     
-    // outer triangle
-    NSBezierPath *outerTrianglePath = [NSBezierPath bezierPath];
+    [NSBezierPath setDefaultLineWidth: 5];
+    [[NSColor redColor] set];
+    NSBezierPath *trianglePath = [NSBezierPath bezierPath];
     
     CGSize frameSize  = self.frame.size;
     
@@ -56,25 +57,15 @@
     CGFloat edge = frameSize.width/7.5;
     CGFloat outterHeight = frameSize.height/2.6;
     
-    [outerTrianglePath moveToPoint: CGPointMake(startPoint, outterHeight)];
-    [outerTrianglePath relativeLineToPoint: NSMakePoint(edge, edge)];
-    [outerTrianglePath relativeLineToPoint: NSMakePoint(edge, -edge)];
-    [outerTrianglePath closePath];
-    [outerTrianglePath fill];
+    [trianglePath moveToPoint: CGPointMake(startPoint, outterHeight)];
+    [trianglePath relativeLineToPoint: NSMakePoint(edge, edge)];
+    [trianglePath relativeLineToPoint: NSMakePoint(edge, -edge)];
+    [trianglePath closePath];
     
+    [trianglePath fill];
     
-    //inner triangle
-    NSBezierPath *innerTrianglePath = [NSBezierPath bezierPath];
-    [[NSColor redColor] set];
-    
-    CGFloat innerPoint = startPoint + 10;
-    CGFloat innerEdge = edge - 10;
-    
-    [innerTrianglePath moveToPoint: CGPointMake(innerPoint, outterHeight + 5)];
-    [innerTrianglePath relativeLineToPoint:NSMakePoint(innerEdge, innerEdge)];
-    [innerTrianglePath relativeLineToPoint:NSMakePoint(innerEdge, -(innerEdge))];
-    [innerTrianglePath closePath];
-    [innerTrianglePath fill];
+    [[NSColor whiteColor] set];
+    [trianglePath stroke];
     
 }
 
